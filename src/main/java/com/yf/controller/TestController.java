@@ -58,6 +58,18 @@ public class TestController {
                     if (fromContent.contains("英雄联盟")) {
                         respContent = "欢迎回来，召唤师!";
                     }
+                }else if("event".equalsIgnoreCase(msgType)){
+                    String event = map.get("Event");//获取菜单的事件类型
+                    if (event.equalsIgnoreCase("click")){//是一个点击事件
+                        String eventKey = map.get("EventKey");//获取点击事件的key
+                        if(eventKey.equalsIgnoreCase("first")){//点击了第一个按钮
+                            //需要执行了业务逻辑
+                        }else if (eventKey.equalsIgnoreCase("second")){   //点击了第二个按钮
+                            //需要执行了业务逻辑
+                        }else if(eventKey.equalsIgnoreCase("third")){//点击了第三个按钮
+                            //需要执行了业务逻辑
+                        }
+                    }
                 }
             } catch (Exception e) {
                 e.printStackTrace();
